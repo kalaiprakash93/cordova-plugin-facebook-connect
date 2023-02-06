@@ -80,7 +80,7 @@
               android:exported="true" />
         </config-file>
 
-        <framework src="com.facebook.android:facebook-android-sdk:$FACEBOOK_ANDROID_SDK_VERSION"/>
+        <framework src="com.facebook.android:facebook-android-sdk:[8,9)"/>
 
         <!-- cordova plugin src files -->
         <source-file src="src/android/ConnectPlugin.java" target-dir="src/org/apache/cordova/facebook" />
@@ -189,9 +189,12 @@
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="FBSDKCoreKit" spec="$FACEBOOK_IOS_SDK_VERSION"/>
+<!--                 <pod name="FBSDKCoreKit" spec="$FACEBOOK_IOS_SDK_VERSION"/>
                 <pod name="FBSDKLoginKit" spec="$FACEBOOK_IOS_SDK_VERSION"/>
-                <pod name="FBSDKShareKit" spec="$FACEBOOK_IOS_SDK_VERSION"/>
+                <pod name="FBSDKShareKit" spec="$FACEBOOK_IOS_SDK_VERSION"/> -->
+                <pod name="FBSDKCoreKit" />
+                <pod name="FBSDKLoginKit" />
+                <pod name="FBSDKShareKit"/>
             </pods>
         </podspec>
 
